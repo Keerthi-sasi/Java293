@@ -59,7 +59,7 @@ class JavaBasics
         System.out.println("Pre-Decrement:"+x+","+y);
         y=x++;
         System.out.println("Post-Increment:"+x+","+y);
-        b=a--;
-        System.out.println("Post-Decrement:"+a+","+b);
+        y=x--;
+        System.out.println("Post-Decrement:"+x+","+y);
     }
 }
