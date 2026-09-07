@@ -1,4 +1,9 @@
 
+import java.util.Random;
+
+
+
+
 class Day5 {
 
     public static void main(String[] args) {
@@ -57,6 +62,7 @@ class Day5 {
         String str = String.valueOf(value);
         System.out.println("Integer:" + value);
         System.out.println("String:" + str);
+        System.out.println(str.length());
 
         //Check whether a string is empty or blank
         String str1 = "";
@@ -72,7 +78,7 @@ class Day5 {
         //Convert a string to a character array and print each character
         String word = "Java";
         char[] letters = word.toCharArray();
-        for(char ch:letters) {
+        for (char ch : letters) {
             System.out.println(ch);
         }
 
@@ -120,7 +126,7 @@ class Day5 {
         //Area of Rhombus
         int d1 = 7;
         int d2 = 8;
-        float areaRhombus = (float) (d1*d2/ 2);
+        float areaRhombus = (float) (d1 * d2 / 2);
         System.out.println("Area of Rhombus:" + areaRhombus);
 
         //Area of Pentagon
@@ -186,6 +192,34 @@ class Day5 {
 
         //logarithm
         System.out.println(Math.log(10));
+
+        //4-digit OTP
+        Random random = new Random();
+        int otp4 = 1000 + random.nextInt(9000);
+        System.out.println("4-digit OTP: " + otp4);
+
+        //6-digit OTP
+        int otp6 = 100000 + random.nextInt(900000);
+        System.out.println("6-digit OTP: " + otp6);
+
+        //Password generator
+        String characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                + "abcdefghijklmnopqrstuvwxyz" + "0123456789" + "!@#$%^&*";
+        int lengthPass = 8;
+        String password = "";
+        for (int i = 0; i < lengthPass; i++) {
+            int ind = random.nextInt(characters.length());
+            password += characters.charAt(ind);
+        }
+        System.out.println("Password " + password);
+        
+        //Check whether alphabet
+        char ch = 'A';
+        if (Character.isLetter(ch)) {
+            System.out.println("It is an alphabet");
+        } else {
+            System.out.println("It is not an alphabet");
+        }
 
     }
 }

@@ -1,13 +1,11 @@
 
+import java.time.Duration;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
-import java.time.format.DateTimeFormatter;
 import java.time.Period;
-import java.time.Duration;
-
+import java.time.format.DateTimeFormatter;
 public class Day4 {
-
     public static void main(String args[]) {
 
         //Display the current date
@@ -66,6 +64,7 @@ public class Day4 {
         //Compare two dates using isBefore()
         LocalDate date1 = LocalDate.of(2024, 5, 10);
         LocalDate date2 = LocalDate.of(2025, 8, 15);
+        System.out.println(date1.isBefore(date2));
         if (date1.isBefore(date2)) {
             System.out.println("Date1 is before Date2");
         } else {
@@ -73,7 +72,7 @@ public class Day4 {
         }
 
         //Compare two dates using isAfter()
-        LocalDate date3 = LocalDate.of(2026, 7, 1);
+        LocalDate date3 = LocalDate.of(2025, 8 ,2);                                                                                                                                                                                   
         LocalDate date4 = LocalDate.of(2025, 7, 1);
         if (date3.isAfter(date4)) {
             System.out.println("Date3 is after Date4");
@@ -82,6 +81,7 @@ public class Day4 {
         }
 
         //Check whether two dates are equal using isEqual()
+        System.out.println(date3.isEqual(date4));
         if (date3.isEqual(date4)) {
             System.out.println("Date3 is equal Date4");
         } else {
@@ -110,6 +110,7 @@ public class Day4 {
         Duration answer = Duration.between(T1, T2);
         System.out.println(answer.toSeconds());
         System.out.println(answer.toMinutes());
-
+           
     }
-}
+    }
+

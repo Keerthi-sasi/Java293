@@ -24,6 +24,25 @@ class Day8 {
             System.out.println(number);
         }
 
+        //2D Array
+        int[][] num = {{15, 10, 5}, {1, 2, 3}};
+        System.out.println(num[0][0]);
+        num[0][0] = 20;
+        System.out.println(num[0][0]);
+        System.out.println(num[0][1]);
+        System.out.println(num[0][2]);
+        System.out.println(num[1][0]);
+        System.out.println(num[1][1]);
+        System.out.println(num[1][2]);
+
+        //Access 2D Array
+        for (int i = 0; i < num.length; i++) {
+            for (int j = 0; j < num[i].length; j++) {
+                System.out.print(num[i][j] + " ");
+            }
+            System.out.println("");
+        }
+
         //reverse the array
         for (int i = arr.length - 1; i >= 0; i--) {
             System.out.println(arr[i]);
