@@ -1,11 +1,11 @@
 
-class Product{
+class Product {
 
-    Product()
-    {
+    Product() {
         System.out.println("Product constructor called");
     }
 }
+
 class Book {
 
     String bookName;
